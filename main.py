@@ -11,7 +11,35 @@ def attack():
 
 
 def analyze():
-    print("Analyze - Coming Soon")
+    filename = "datasets/sample1.txt"
+
+    with open(filename, "r") as file:
+        text = file.read()
+
+    characters = len(text)
+    words = len(text.split())
+    lines = len(text.splitlines())
+    unique_characters = len(set(text))
+
+    print("\n===== File Analysis =====")
+    print("Characters :", characters)
+    print("Words      :", words)
+    print("Lines      :", lines)
+    print("Unique Characters :", unique_characters)
+
+    print("\nLetter Frequency:")
+
+    frequency = {}
+
+    for ch in text.lower():
+        if ch.isalpha():
+            if ch in frequency:
+                frequency[ch] += 1
+            else:
+                frequency[ch] = 1
+
+    for letter in sorted(frequency):
+        print(letter, ":", frequency[letter])
 
 
 def show_menu():
