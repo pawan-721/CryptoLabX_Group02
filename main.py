@@ -1,3 +1,4 @@
+from datetime import datetime
 def encrypt():
     print("Encrypt - Coming Soon")
 
@@ -42,6 +43,11 @@ def analyze():
         print(letter, ":", frequency[letter])
 
 
+def log_activity(option):
+    with open("outputs/log.txt", "a") as log:
+        current_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        log.write(f"{current_time} - {option}\n")
+
 def show_menu():
     print("\n===== CryptoLabX =====")
     print("1. Encrypt")
@@ -58,18 +64,23 @@ def main():
         choice = input("Enter your choice: ")
 
         if choice == "1":
+       	    log_activity("Encrypt")
             encrypt()
 
         elif choice == "2":
+       	    log_activity("Decrypt")
             decrypt()
 
         elif choice == "3":
+            log_activity("Attack")
             attack()
 
         elif choice == "4":
+            log_activity("Analyse")
             analyze()
 
         elif choice == "5":
+            log_activity("Exit")
             print("Thank you for using CryptoLabX.")
             break
 
