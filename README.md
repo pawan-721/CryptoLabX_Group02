@@ -5,7 +5,7 @@
 ### Team Members
 
 - Pawan Regar
-- Atul Kumar Meghwal
+- Gurrapu Karthikeya
 
 ---
 
