@@ -1,0 +1,3 @@
+Plaintext: likes and loves
+Key: 7
+Ciphertext: sprlz huk svclz

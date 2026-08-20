@@ -1,0 +1,3 @@
+Plaintext: hello world
+Key: 3
+Ciphertext: khoor zruog
