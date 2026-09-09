@@ -1,0 +1,21 @@
+ONLINE BANKING SYSTEM
+1. Login
+2. Check Balance
+3. Transfer Funds
+4. Add Beneficiary
+5. List Beneficiaries
+6. Transaction History
+7. Logout
+8. Exit
+
+Username: alice
+Password: alice123
+Login successful. Welcome Alice!
+
+Enter account ID to view balance (1=Alice, 2=Bob, 3=Admin): 1
+Account: Alice | Balance: Rs.10000.00
+
+Enter account ID to view balance (1=Alice, 2=Bob, 3=Admin): 2
+Account: Bob | Balance: Rs.7000.00
+
+The second query demonstrates Broken Access Control.
