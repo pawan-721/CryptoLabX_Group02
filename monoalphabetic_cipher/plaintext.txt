@@ -1,0 +1,26 @@
+LEMMA 2.2: An encryption scheme (Gen, Enc, Dec) over a message space
+M is perfectly secret if and only if for every probability distribution over M,
+every message m E M, and every ciphertext c E C: 
+
+Using Bayes' theorem (see Theorem A.8), the left-hand-side is exactly equal
+to Pr[M = m | C = c]. Thus, Pr[M = m I|C = c] = Pr[M = m] and the
+scheme is perfectly secret.
+The other direction of the proof is left as an exercise. 
+
+We emphasize that in the above proof we used the fact that (by the simplifying 
+convention mentioned earlier) both m E M and c E C are assigned
+non-zero probabilities, enabling division by Pr[C = c] and conditioning on the
+event M = m. 
+
+Perfect indistinguishability: We now use Lemma 2.2 to obtain another
+equivalent and useful formulation of perfect secrecy. This formulation states
+that the probability distribution over C is independent of the plaintext. That
+is, let C(m) denote the distribution of the ciphertext when the message being 
+encrypted is m E M (this distribution depends on the choice of key, as
+well as the randomness of the encryption algorithm in case it is probabilistic).
+Then the claim is that for every mo, m1 belongs to M, the distributions C(m.) and
+C(m1) are identical. This is just another way of saying that the ciphertext
+contains no information about the plaintext. We refer to this formulation as
+perfect indistinguishability because it implies that it is impossible to distinguish
+an encryption of m0 from an encryption of m1 (due to the fact that the
+distribution over the ciphertext is the same in each case).
